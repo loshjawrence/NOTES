@@ -6,6 +6,17 @@
 ## Blueprint child classes
  * drawer->C++ Classes->rclick class->create blueprint based on classname
 
+### DERIVE BLUEPRINT FROM EXISTING
+* if in the scene select in window or outliner
+and go to details on the rhs click on the node icon
+click "derive child blueprint class"
+* if in drawer then rclick and "create child blueprint class"
+
+### APPLY TO ALL INSTANCES
+* if in the scene select in window or outliner
+and go to details on the rhs click on the node icon
+click "apply instance changes to blueprint"
+
 ### ASSETS
 After you've made your project go to the
 Epic Games launcher->library->find the content and add to project
@@ -23,7 +34,7 @@ Epic Games launcher->library->find the content and add to project
 * rclick in the ortho views will draw around the view
 * upper right box button in any of the 4 windows will maximize the window to full render view
 
-### MOVE SCENE ELEMENTS TO FOLDER
+### MOVE/ORGANIZE SCENE/OUTLINER ELEMENTS TO FOLDER
 Go to Outliner window-> select elements-> move to-> create new folder
 
 ### GRID SNAP
