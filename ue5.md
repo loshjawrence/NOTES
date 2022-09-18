@@ -33,6 +33,20 @@ Go to Outliner window-> select elements-> move to-> create new folder
 ### UNLIT
 * Upper left in render window can select various rendering styles
 
+### SKY LIGHT
+* quickly add to scene (cube with green plus)
+-> lightbulb icon
+-> skylight
+-> content drawr 
+-> upper right settings cog-> show engine content
+->engine folder: search bp sky sphere
+-> goto skylight in outliner
+-> go to "skylight" property and click recapture scene
+-> goto bp sky shere and link it to your directional light
+with prop "Directional light actor"
+then refesh material on the bp sky sphere when ever you rotate
+the directional light
+
 
 ### Shortcuts
   * Content Drawer:         Ctrl+Space
