@@ -6,8 +6,33 @@
 ## Blueprint child classes
  * drawer->C++ Classes->rclick class->create blueprint based on classname
 
-Visual Studio
-tools->visual studio 2022
+### ASSETS
+After you've made your project go to the
+Epic Games launcher->library->find the content and add to project
+->show all-> find you project-> select latest version if red->add to project
+
+### LEVEL
+* file -> new level
+
+### Visual Studio
+* tools->visual studio 2022
+
+### 4 VIEW WINDOWS MODE
+* the upper right in render window has 4 pane window button
+* middle mouse click will measure
+* rclick in the ortho views will draw around the view
+* upper right box button in any of the 4 windows will maximize the window to full render view
+
+### MOVE SCENE ELEMENTS TO FOLDER
+Go to Outliner window-> select elements-> move to-> create new folder
+
+### GRID SNAP
+* upper right there are move,scale, rotation snappings
+* for move, 100 is a 1 meter snap since 1 unit is 1 cm in unreal
+
+### UNLIT
+* Upper left in render window can select various rendering styles
+
 
 ### Shortcuts
   * Content Drawer:         Ctrl+Space
@@ -17,6 +42,8 @@ tools->visual studio 2022
   * shader cost:            F5
   * move,rot,scale:         w,e,r
   * clone in place:         alt+click move gizmo and drag
+  * new level:              ctrl+n
+  * box select:             ctrl+alt+lmouse drag
 
 visual scripting nodes
 MoveUpdatedComponent - use character movement rules to move the character around
