@@ -1,9 +1,9 @@
-### Blueprint to C++
+### BLUEPRINT TO C++
  * Section 3: Obstacle Assault 42. Compiling a C++ Project
  * Tools -> New C++ Class -> Actor
  * UPROPERTY a macro to decorate a c++ class member variable
  so that it is seen in the editor and editable
-## Blueprint child classes
+## BLUEPRINT CHILD CLASSES
  * drawer->C++ Classes->rclick class->create blueprint based on classname
 
 ### DERIVE BLUEPRINT FROM EXISTING
@@ -12,10 +12,23 @@ and go to details on the rhs click on the node icon
 click "derive child blueprint class"
 * if in drawer then rclick and "create child blueprint class"
 
-### APPLY TO ALL INSTANCES
+### APPLY CHANGES TO ALL BLUEPRINT INSTANCES
 * if in the scene select in window or outliner
 and go to details on the rhs click on the node icon
 click "apply instance changes to blueprint"
+
+### ADD C++ COMPONENT
+Go to C++ Classes folder in contnet drawer and
+rclick in file area (or the green + add button)
+then select create C++ class.
+Or in the detail tab of the scene element,
+click add (green plus) then create new c++ component
+NOTE: Doesnt add it yet
+need to add again and search for you new component then
+it will show up in the list of compoents for the scene element
+
+### TRACE CHANNEL COLLISION
+Settings->Project Settings
 
 ### ASSETS
 After you've made your project go to the
@@ -25,7 +38,7 @@ Epic Games launcher->library->find the content and add to project
 ### LEVEL
 * file -> new level
 
-### Visual Studio
+### OPEN VISUAL STUDIO
 * tools->visual studio 2022
 
 ### 4 VIEW WINDOWS MODE
@@ -58,17 +71,17 @@ with prop "Directional light actor"
 then refesh material on the bp sky sphere when ever you rotate
 the directional light
 
-
 ### Shortcuts
-  * Content Drawer:         Ctrl+Space
-  * Play:                   Ctrl+p
-  * cursor during play:     shift+F1
-  * wireframe:              F1
-  * shader cost:            F5
-  * move,rot,scale:         w,e,r
-  * clone in place:         alt+click move gizmo and drag
-  * new level:              ctrl+n
-  * box select:             ctrl+alt+lmouse drag
+    * Eject during play:        F8
+    * Content Drawer:           Ctrl+Space
+    * Play:                     Ctrl+p
+    * cursor during play:       shift+F1
+    * wireframe:                F1
+    * shader cost:              F5
+    * move,rot,scale:           w,e,r
+    * clone in place:           alt+click move gizmo and drag
+    * new level:                ctrl+n
+    * box select:               ctrl+alt+lmouse drag
 
 visual scripting nodes
 MoveUpdatedComponent - use character movement rules to move the character around
