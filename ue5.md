@@ -28,7 +28,22 @@ need to add again and search for you new component then
 it will show up in the list of compoents for the scene element
 
 ### TRACE CHANNEL COLLISION
+Creates a filter for scene travesal
+so that you only are testing against things
+in the "channel"
+can do line or geometry(sphere) trace
+can keep going or stop on first hit
 Settings->Project Settings
+->Engine->Collision
+->new trace channel
+->objects in scene that want that filter
+need to say they are attaching collision trace channel
+Go to Details panel
+Collision->Collision Presets(set to Custom...)
+Collision Responses and set to Block
+so that it "hits" against the ray
+i.e. block the line of sight
+
 
 ### ASSETS
 After you've made your project go to the
