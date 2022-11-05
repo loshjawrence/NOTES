@@ -1,3 +1,5 @@
+CURRENT: crypt raider 94
+
 ### BLUEPRINT TO C++
  * Section 3: Obstacle Assault 42. Compiling a C++ Project
  * Tools -> New C++ Class -> Actor
@@ -27,8 +29,26 @@ NOTE: Doesnt add it yet
 need to add again and search for you new component then
 it will show up in the list of compoents for the scene element
 
+### WORLD OBJECT
+* type is UWorld
+* map and ULevel is synonymous
+* load ULevel's in to the UWorld
+
+### SHERE TRACE
+* Can find channels in
+<projectRoot>/Config/DefaultEngine.ini
+* search "ChannelResponse"
+* grab the "Channel=" string
+(something like ECC_GameTraceChannel2)
+This is the c++ name
+* pass that auto generated channel name to GetWorld()->SweepSingleByChannel(...)
+
+
+
+### CREATE BLUEPRINT NODES IN C++
+
 ### TRACE CHANNEL COLLISION
-Creates a filter for scene travesal
+Creates a filter for scene traversal
 so that you only are testing against things
 in the "channel"
 can do line or geometry(sphere) trace
@@ -43,7 +63,33 @@ Collision->Collision Presets(set to Custom...)
 Collision Responses and set to Block
 so that it "hits" against the ray
 i.e. block the line of sight
+* The file where to get the name to use in the code is <repo>/Config/DefaultEngine.ini
+ then look for "CollisionResponses"
 
+### INPUT MAPPINGS
+## EVENTS WAY:
+Project Settings Cog-> Input -> Action Mappings(Press/Release) or Axis Mappings (Continuous/Toggle sticks)
+Delete Primary action
+Click the + button next to action mappings
+Call it Grab(or whatever)
+Click the icon and press a button or click a mouse button
+Or you can click the drop down and select the gamepad or whatever
+To use it go to the player's BP (Probably BP_Player)
+Rclick in the blueprint event graph and look for Grab
+
+### BLUEPRINT CALLABLE
+## CALL C++ FROM BLUEPRINT
+Example
+// .h
+UFUNCTION(BlueprintCallable)
+void Release()
+// .cpp
+void Grabber::Release()
+{
+    UE_LOG(LogTemp, Display, TEXT("Grabber Released!"))
+}
+* Then in the blueprint get a Grabber object, drag off it and search for Release
+and link up an event trigger to it (the action mapping)
 
 ### ASSETS
 After you've made your project go to the
