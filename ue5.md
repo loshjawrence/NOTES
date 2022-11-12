@@ -1,4 +1,4 @@
-CURRENT: crypt raider 94
+CURRENT: crypt raider 95
 
 ### BLUEPRINT TO C++
  * Section 3: Obstacle Assault 42. Compiling a C++ Project
@@ -43,7 +43,29 @@ it will show up in the list of compoents for the scene element
 This is the c++ name
 * pass that auto generated channel name to GetWorld()->SweepSingleByChannel(...)
 
+### PHYSICS
+For perf physics components go to sleep when not involved in anything
+and need to be woken up UPrimitiveComponent::WakeAllRigidBodies
 
+### SET DEFAULT LEVEL
+Edit->project settings->maps modes->editor startup map, game default map
+
+
+### creat blueprint from scene object
+click on an object in the scene and click the node tree thing for the instance
+call it BP_Blah
+
+### BOX COLLISION
+when in a blueprint click add and search box collision
+then make sure to edit the collision presets
+i.e. probably turn on overlap against the object that needs to trigger it
+make sure generate overlap events is checked
+event graph node "on component begin overlap"
+
+### add c++ component to existing blueprint
+* add c++ component
+* optionally go to all classess and search for parent class to derive from
+* need in h file above class declaration: UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 
 ### CREATE BLUEPRINT NODES IN C++
 
@@ -53,7 +75,7 @@ so that you only are testing against things
 in the "channel"
 can do line or geometry(sphere) trace
 can keep going or stop on first hit
-Settings->Project Settings
+edit->Project Settings
 ->Engine->Collision
 ->new trace channel
 ->objects in scene that want that filter
@@ -68,7 +90,7 @@ i.e. block the line of sight
 
 ### INPUT MAPPINGS
 ## EVENTS WAY:
-Project Settings Cog-> Input -> Action Mappings(Press/Release) or Axis Mappings (Continuous/Toggle sticks)
+Edit->Project Settings-> Input -> Action Mappings(Press/Release) or Axis Mappings (Continuous/Toggle sticks)
 Delete Primary action
 Click the + button next to action mappings
 Call it Grab(or whatever)
